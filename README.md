@@ -1,15 +1,26 @@
 # cosmo-attendance
 
-To install dependencies:
+Automatically complete attendance challenges inside of MODHAUS's Cosmo platform. This tool monitors and responds to attendance check-ins, ensuring consistent participation without manual intervention.
+
+## Setup
+
+Install dependencies:
 
 ```bash
 bun install
 ```
 
-To run:
+Set required environment variables:
+
+```bash
+export ACCESS_TOKEN="your_cosmo_access_token"
+export ARTISTS="tripleS,artms"  # Optional: comma-separated list of artists
+```
+
+Run the automation:
 
 ```bash
 bun run index.ts
 ```
 
-This project was created using `bun init` in bun v1.2.21. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+Built with Bun runtime for fast execution and reliable automation.
