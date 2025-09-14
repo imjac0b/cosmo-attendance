@@ -7,7 +7,7 @@ if (!accessToken) {
   throw new Error("ACCESS_TOKEN is not set");
 }
 
-if (!artists) {
+if (!artists || artists.length === 0) {
   console.warn("ARTISTS is not set, setting to tripleS");
   artists = ["tripleS"];
 }
