@@ -23,5 +23,5 @@ jobs:
       - name: Run Cosmo Attendance
         run: bun run index.ts
         env:
-          ACCESS_TOKEN: ${{ secrets.COSMO_ACCESS_TOKEN }}
-          ARTISTS: ${{ secrets.COSMO_ARTISTS }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          ARTISTS: ${{ secrets.ARTISTS }}
