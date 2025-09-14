@@ -1,0 +1,27 @@
+name: Cosmo Attendance
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+
+  workflow_dispatch:
+
+jobs:
+  cosmo-attendance:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Main Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install Dependencies
+        run: bun i --frozen-lockfile
+
+      - name: Run Cosmo Attendance
+        run: bun run index.ts
+        env:
+          ACCESS_TOKEN: ${{ secrets.COSMO_ACCESS_TOKEN }}
+          ARTISTS: ${{ secrets.COSMO_ARTISTS }}
